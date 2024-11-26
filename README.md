@@ -3,6 +3,9 @@ Code for final project ENGR 510. “what are we” Web application development
 
 Utilizing Sentiment Analysis Library: TextBlob
 
+## REQ PACKAGES:
+pip install TextBlob
+
 
 # Example usage; 
 input -> 
