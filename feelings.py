@@ -27,9 +27,23 @@ def analyze_conversation(conversation):
 # Function to run the application
 def main():
     print("Welcome to the Reciprocated Feelings Analyzer!")
-    print("Paste your conversation below (press Enter twice to submit):")
     
-    # Accept multiline input for the conversation
+    # Allow the user to select a desired outcome first
+    outcomes = ["Friends", "More than friends", "Dating", "MARRY ME"]
+    print("Select your desired outcome:")
+    for i, outcome in enumerate(outcomes, 1):
+        print(f"{i}. {outcome}")
+    
+    choice = int(input("\nEnter the number of your choice: "))
+    if 1 <= choice <= len(outcomes):
+        chosen_outcome = outcomes[choice - 1]
+        print(f"\nYou chose: {chosen_outcome}")
+    else:
+        print("\nInvalid choice. Exiting.")
+        return
+    
+    # Ask for the conversation
+    print("\nNow paste your conversation below (press Enter twice to submit):")
     conversation = []
     while True:
         line = input()
@@ -43,21 +57,10 @@ def main():
     
     # Display results
     print("\nResults:")
+    print(f"Desired Outcome: {chosen_outcome}")
     print(f"Reciprocated Feelings %: {feelings_percent}%")
     print(f"Phrase: {phrase}")
     print(f"Heart: {heart}")
-    
-    # Allow the user to select a desired outcome
-    outcomes = ["Friends", "More than friends", "Dating", "MARRY ME"]
-    print("\nSelect your desired outcome:")
-    for i, outcome in enumerate(outcomes, 1):
-        print(f"{i}. {outcome}")
-    
-    choice = int(input("\nEnter the number of your choice: "))
-    if 1 <= choice <= len(outcomes):
-        print(f"\nYou chose: {outcomes[choice - 1]}")
-    else:
-        print("\nInvalid choice. Exiting.")
 
 # Run the application
 if __name__ == "__main__":
