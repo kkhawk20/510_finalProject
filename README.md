@@ -23,3 +23,9 @@ Select your desired outcome:
 2. More than friends
 3. Dating
 4. MARRY ME
+
+
+# Resources
+* https://textblob.readthedocs.io/en/dev/
+* Chat GPT for debugging
+* https://textblob.readthedocs.io/en/dev/quickstart.html#sentiment-analysis
